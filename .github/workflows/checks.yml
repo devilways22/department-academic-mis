@@ -2,7 +2,11 @@ name: Portal checks
 on: [push, pull_request]
 jobs:
   test:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -11,5 +15,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: python -m unittest test_portal -v
+      - run: python -m unittest discover -v
       - run: node --check app.js
+      - if: runner.os != 'Windows'
+        run: |
+          sh -n start.sh
+          sh -n 'Start Portal.command'
+          python schedule_reports.py --dry-run
