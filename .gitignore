@@ -1,0 +1,17 @@
+/data/
+/qa/
+/mis_qa/
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.sqlite3-*
+*.log
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+/tmp*/
+~$*
+~WRL*
+*.tmp
