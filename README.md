@@ -2,6 +2,28 @@
 
 A clean academic department portal with a GUI, weekly faculty reporting, automatic growth milestones, task assignment and monthly Word MIS exports. Faculty, department particulars, goals and updates start empty. No personal reports or database are included.
 
+## Screenshots
+
+These screenshots show a fresh, empty workspace; no real faculty or departmental records are included.
+
+### Department dashboard
+
+Overview of tasks, reporting coverage and the monthly submission timeline.
+
+![Department dashboard](docs/screenshots/dashboard.webp)
+
+### Weekly faculty updates
+
+Template-mapped academic reporting areas and weekly submission tracking.
+
+![Weekly faculty updates](docs/screenshots/weekly-updates.webp)
+
+### Monthly MIS reports
+
+Dean’s summary, reporting completeness checks and Word report downloads.
+
+![Monthly MIS report workspace](docs/screenshots/monthly-mis.webp)
+
 ## Run locally
 
 Requires Python 3.10 or later. No third-party Python packages are required.
